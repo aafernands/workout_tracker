@@ -13,6 +13,14 @@
 const WorkoutModel = require("../models/workout");
 
 module.exports = function (app) {
+	app.put("/api/workouts/:id", (req, res) => {
+		WorkoutModel.findOneAndUpdate(
+			{ _id: req.params.id },
+			{ $push: { exercises: req.body } }
+		).then((updateModel) => {
+			res.json(updateModel);
+		});
+	});
 	app.post("/api/workouts", (req, res) => {
 		WorkoutModel.create({}).then((newWorkout) => {
 			console.log(newWorkout);
