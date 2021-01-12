@@ -13,6 +13,17 @@
 const WorkoutModel = require("../models/workout");
 
 module.exports = function (app) {
+	app.get("/api/workouts/range", (req, res) => {
+		WorkoutModel.find()
+			// .sort('-day') // decending
+			// .sort("day") // ascending
+			// default asending by _id which is date timestamp
+			.limit(7)
+			.then((workouts) => {
+				res.json(workouts);
+			});
+	});
+
 	app.put("/api/workouts/:id", (req, res) => {
 		WorkoutModel.findOneAndUpdate(
 			{ _id: req.params.id },
