@@ -13,6 +13,12 @@
 const WorkoutModel = require("../models/workout");
 
 module.exports = function (app) {
+	app.post("/api/workouts", (req, res) => {
+		WorkoutModel.create({}).then((newWorkout) => {
+			console.log(newWorkout);
+			res.json(newWorkout);
+		});
+	});
 	app.get("/api/workouts", function (req, res) {
 		WorkoutModel.find().then((result) => {
 			res.json(result);
