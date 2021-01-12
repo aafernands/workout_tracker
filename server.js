@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 // connect to database
 mongoose.connect(
 	process.env.DATABASE_URI || "mongodb://localhost/workout-trakcer",
-	{ useNewUrlParser: true }
+	{ useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 require("./models");
