@@ -29,17 +29,17 @@ module.exports = function (app) {
 	});
 	app.get("/api/workouts", function (req, res) {
 		WorkoutModel.find()
-			.lean()
+			// .lean() // if using virtual then don't use lean
 			.then((result) => {
 				// calculate total duration
-				result.forEach((workout) => {
-					let totalDuration = 0;
-					workout.exercises.forEach((exercise) => {
-						totalDuration += exercise.duration;
-					});
-					console.log("totalDuration", totalDuration);
-					workout.totalDuration = totalDuration;
-				});
+				// result.forEach((workout) => {
+				// 	let totalDuration = 0;
+				// 	workout.exercises.forEach((exercise) => {
+				// 		totalDuration += exercise.duration;
+				// 	});
+				// 	console.log("totalDuration", totalDuration);
+				// 	workout.totalDuration = totalDuration;
+				// });
 				res.json(result);
 			});
 	});
