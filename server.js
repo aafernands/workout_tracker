@@ -6,7 +6,8 @@ const mongoose = require("mongoose");
 
 // connect to database
 mongoose.connect(
-	process.env.DATABASE_URI || "mongodb://localhost/workout-trakcer"
+	process.env.DATABASE_URI || "mongodb://localhost/workout-trakcer",
+	{ useNewUrlParser: true }
 );
 
 require("./models");
