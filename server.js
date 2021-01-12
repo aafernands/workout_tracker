@@ -2,6 +2,14 @@
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+// connect to database
+mongoose.connect(
+	process.env.DATABASE_URI || "mongodb://localhost/workout-trakcer"
+);
+
+require("./models");
 
 const app = express();
 
@@ -16,7 +24,7 @@ app.use(bodyParser.json()); // parse body for json data type
 // app.set("views", "./views");
 // app.set("view engine", "pug");
 
-
+require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // Starts our server
