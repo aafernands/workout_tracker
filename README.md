@@ -1,4 +1,4 @@
-# Eat-Da-Burguer-App
+# Workout Tracker APP
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 ![GitHub license](https://img.shields.io/badge/Made%20by-%40aafernands-orange)
