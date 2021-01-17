@@ -6,34 +6,34 @@
 Deployed Aplication:
 [Work out Tracker](https://alexworkouttracker.herokuapp.com/)
 
-| Table of Contents |
-| ----------------- |
-| [Usage](#Usage)   |
-| [Tests](#Tests)   |
-| [Summary](#Summary)
-| [Questions](#Questions) |
+| Table of Contents             |
+| ----------------------------- |
+| [Usage](#Usage)               |
+| [Tests](#Tests)               |
+| [Summary](#Summary)           |
+| [Questions](#Questions)       |
 | [Installation](#Installation) |
-| [License](#License) |
+| [License](#License)           |
 
 ## Project Description
 
-This application allows users to create and track daily workouts. They can create multiple exercises in a workout on a given day and can also track the namem type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, user can track the distance traveled. 
+This application allows users to create and track daily workouts. They can create multiple exercises in a workout on a given day and can also track the namem type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, user can track the distance traveled.
 
 ## Installation
 
-
 Before runninf this application install the following commands on terminal:
 
-` npm install express`
-
+```bash
+$ npm install
+```
 
 To run this application use the following command lines:
 
-`node server`
-
+```bash
+$ npm start
+```
 
 <br>
-
 
 ## Usage
 
